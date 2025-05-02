@@ -1,0 +1,31 @@
+@media (min-width: 601px) {
+  body {
+    width: 40vw;
+    max-width: 400px;
+    margin: 0px auto;
+  }
+  .delete-button {
+    display: none;
+    }
+  .main-div:hover .delete-button {
+    display: initial;
+  }
+  .attribution {
+    font-size: 11px; text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  .todo-item {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  } 
+  .todo-even {
+      background-color: lightblue;
+  }
+
+  .todo-odd {
+      background-color: lightgray;
+  }
+}

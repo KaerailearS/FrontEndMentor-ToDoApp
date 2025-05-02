@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ensures proper display on all devices -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <header>
+      <h1>TODO</h1>
+      <button type="button" class="todo__theme-toggle-button">
+        <img id="theme-icon" src="./images/icon-moon.svg" alt="Theme toggler" />
+      </button>
+    </header>
+    <section class="todo">
+      <!-- Todo input section -->
+      <div class="todo__input-container">
+        <form id="todo__form">
+          <input id="todo__checkbox" class="todo__checkbox" type="checkbox" />
+          <input
+            id="todo__input"
+            class="todo__input"
+            placeholder="Create a new todo..."
+          />
+        </form>
+      </div>
+
+      <!-- Todo list section, dynamically populated by JS -->
+      <section class="todo__list-container">
+        <ul id="todo__list"></ul>
+      </section>
+
+      <!-- Bottom bar section with filter buttons and clear button -->
+      <footer class="todo__bottom-bar">
+        <div class="todo__items-left">
+          <p id="todo__items-left">
+            <!-- Dynamically added items left count -->
+          </p>
+        </div>
+
+        <div class="todo__filter-buttons">
+          <button
+            type="button"
+            class="todo__filter-button todo__filter-button--active"
+          >
+            All
+          </button>
+          <button type="button" class="todo__filter-button">Active</button>
+          <button type="button" class="todo__filter-button">Completed</button>
+        </div>
+
+        <div class="todo__clear-completed">
+          <button type="button" class="todo__clear-completed-button">
+            Clear Completed
+          </button>
+        </div>
+      </footer>
+
+      <!-- Drag and drop hint -->
+      <p id="todo__dragdrop-paragraph" class="todo__drag-drop-hint">
+        Drag and drop to reorder list
+      </p>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Taavi</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

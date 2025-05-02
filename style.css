@@ -1,0 +1,194 @@
+*//* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* === Theme Variables === */
+:root {
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: hsl(235, 19%, 35%);
+  --todo-bg: white;
+  --todo-border: hsl(233, 11%, 84%);
+  --todo-completed: hsl(233, 14%, 35%);
+  --button-hover: hsl(236, 33%, 92%);
+}
+
+body.dark-mode {
+  --bg-color: hsl(235, 21%, 11%);
+  --text-color: hsl(234, 39%, 85%);
+  --todo-bg: hsl(235, 24%, 19%);
+  --todo-border: hsl(233, 14%, 35%);
+  --todo-completed: hsl(233, 14%, 55%);
+  --button-hover: hsl(234, 11%, 52%);
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 550px;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  color: white;
+  letter-spacing: 12px;
+}
+
+.todo__theme-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === Input Section === */
+.todo__input-container {
+  width: 100%;
+  max-width: 550px;
+  background-color: var(--todo-bg);
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#todo__form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.todo__input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* === Todo List Section === */
+.todo__list-container {
+  width: 100%;
+  max-width: 550px;
+  background-color: var(--todo-bg);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#todo__list {
+  list-style: none;
+}
+
+.todo__item {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--todo-border);
+}
+
+.todo__item--completed {
+  text-decoration: line-through;
+  color: var(--todo-completed);
+}
+.hidden {
+  display: none;
+}
+/* === Bottom Bar === */
+.todo__bottom-bar {
+  width: 100%;
+  max-width: 550px;
+  background-color: var(--todo-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  border-radius: 0 0 5px 5px;
+}
+
+.todo__filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo__filter-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.todo__filter-button:hover,
+.todo__filter-button--active {
+  color: hsl(220, 98%, 61%);
+}
+
+/* === Clear Completed === */
+.todo__clear-completed-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.todo__clear-completed-button:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+/* === Drag Drop Hint === */
+.todo__drag-drop-hint {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.todo__item.dragging {
+  opacity: 0.5;
+  background-color: var(--todo-border);
+}
+/* === Attribution === */
+.attribution {
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.attribution a {
+  color: hsl(220, 98%, 61%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .todo__bottom-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
