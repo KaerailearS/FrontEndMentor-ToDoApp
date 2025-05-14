@@ -47,12 +47,14 @@ header {
 }
 
 header h1 {
-  color: white;
+  color: purple;
   letter-spacing: 12px;
 }
 
 .todo__theme-toggle-button {
-  background: none;
+  background: black;
+  border-radius: 100%;
+  padding: 3px 4px 2px;
   border: none;
   cursor: pointer;
 }
@@ -86,7 +88,7 @@ header h1 {
 
 /* === Todo List Section === */
 .todo__list-container {
-  width: 100%;
+  width: 110%;
   max-width: 550px;
   background-color: var(--todo-bg);
   border-radius: 5px;
